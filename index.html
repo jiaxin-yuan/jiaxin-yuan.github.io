@@ -222,9 +222,8 @@
                     <h3 class="text-6xl serif italic font-black mb-4 group-hover:text-gray-300 transition-colors">Content creator</h3>
                     <p class="font-bold text-gray-400 mb-6">550,000+ views (single video) </p>
                     <div class="flex space-x-6 font-black uppercase text-sm">
-                        <a class="border-b-2 border-white hover:border-gray-400">Instagram</a>
-                        <a class="border-b-2 border-white hover:border-gray-400">Red Notebook</a>
-                         <a class="border-b-2 border-white hover:border-gray-400">Channels</a>
+                        <a href="https://www.xiaohongshu.com/user/profile/5a7ed9b64eacab3e8076448d" target="_blank" class="border-b-2 border-white hover:border-gray-400">Red Notebook</a>
+                         <button type="button" onclick="document.getElementById('channels-modal').classList.remove('hidden')" class="border-b-2 border-white hover:border-gray-400 uppercase font-black">Channels</button>
                         
                         
                     </div>
@@ -250,6 +249,15 @@
             </div>
         </div>
     </footer>
+
+
+    <div id="channels-modal" class="hidden fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-6" onclick="this.classList.add('hidden')">
+        <div class="bg-white p-4 max-w-sm w-full text-black text-center" onclick="event.stopPropagation()">
+            <img src="channels-qr.png" alt="WeChat Channels QR code" class="w-full h-auto">
+            <p class="text-xs font-black uppercase tracking-widest mt-3">Scan with WeChat to view my channel</p>
+            <button type="button" onclick="document.getElementById('channels-modal').classList.add('hidden')" class="mt-3 text-xs font-black uppercase tracking-widest border-2 border-black px-4 py-2 hover:bg-black hover:text-white transition-colors">Close</button>
+        </div>
+    </div>
 
     <script>
         // 初始化滚动视差/加载动画 - 加快了速度以匹配 "Intensive" 风格
